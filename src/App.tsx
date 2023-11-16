@@ -5,6 +5,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [saveCount, setSaveCount] = useState<number[]>([])
 
   return (
     <>
@@ -21,11 +22,11 @@ function App() {
         <button className="set-counter" onClick={() => setCount((count) => count + 1)}>
           Set Count: {count}
         </button>
-        <button className="save-counter">
+        <button className="save-counter" onClick={() => setSaveCount([...saveCount, count])}>
           Save Count
         </button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          {saveCount.join(', ')}
         </p>
       </div>
       <p className="read-the-docs">
