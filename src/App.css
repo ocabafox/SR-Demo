@@ -34,7 +34,29 @@
 }
 
 .card {
+  background-color: #ffffff;
   padding: 2em;
+  border-radius: 10px;
+}
+
+.card > .set-counter {
+  margin-right: 5px;
+  width: 150px;
+  background-color:darkslategray;
+}
+
+.card > .save-counter {
+  margin-left: 5px;
+  width: 150px;
+  background-color:darkslategray;
+}
+
+button:focus, button:focus-visible {
+  outline: none !important;
+}
+
+.card > p {
+  color: #888;
 }
 
 .read-the-docs {
